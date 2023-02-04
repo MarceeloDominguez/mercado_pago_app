@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   wrapAvatar: {
-    backgroundColor: "#29b0eb",
+    backgroundColor: "#32b3ff",
     height: 30,
     width: 30,
     justifyContent: "center",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   number: {
     fontSize: 12,
     fontWeight: "bold",
-    color: "green",
+    color: "#00a650",
   },
   name: {
     color: "#fff",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginLeft: 3,
   },
   wrapIconQuestion: {
-    backgroundColor: "#29b0eb",
+    backgroundColor: "#32b3ff",
     paddingHorizontal: 6,
     borderRadius: 4,
     marginRight: 10,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   wrapCVU: {
-    backgroundColor: "#29b0eb",
+    backgroundColor: "#32b3ff",
     paddingHorizontal: 6,
     borderRadius: 4,
     height: 25,
