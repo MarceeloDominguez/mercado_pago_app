@@ -15,7 +15,7 @@ export default function TypeOfOperations({ title }: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    height: 45,
+    height: 40,
     backgroundColor: "rgba(71,154,209,.15)",
     borderRadius: 8,
     justifyContent: "center",
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     letterSpacing: 0.2,
-    fontSize: 12,
+    fontSize: 11,
     color: "#009ee3",
   },
 });

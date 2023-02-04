@@ -1,13 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import Icon from "@expo/vector-icons/Ionicons";
+
+const { width } = Dimensions.get("window");
+console.log(width);
 
 export default function MyCards() {
   return (
     <View style={styles.container}>
       <View style={styles.cardSecondary}>
         <View style={styles.containerTextCard}>
-          <Text style={styles.textCard}>***</Text>
+          <Text style={styles.textCard}>*** ***</Text>
           <Text style={styles.numberCard}>6589</Text>
         </View>
       </View>
@@ -42,8 +45,8 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     borderRadius: 8,
     flex: 1,
-    marginRight: 16,
-    paddingRight: 20,
+    marginRight: width <= 360 ? 10 : 15,
+    paddingRight: 15,
   },
   containerTextCard: {
     flexDirection: "row",
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
   },
   numberCard: {
     color: "#fff",
-    fontSize: 15,
+    fontSize: 13,
     letterSpacing: 1,
     fontWeight: "bold",
   },
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     right: 0,
-    width: "70%",
+    width: width <= 360 ? "66%" : "66%",
     borderRadius: 8,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -77,11 +80,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   imageMasterCard: {
-    width: 30,
-    height: 30,
+    width: 26,
+    height: 26,
   },
   imageMercadoPago: {
-    width: 80,
-    height: 80,
+    width: 73,
+    height: 73,
+    marginRight: width <= 360 ? 10 : 10,
   },
 });

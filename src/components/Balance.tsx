@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import Icon from "@expo/vector-icons/Ionicons";
 
 export default function Balance() {
@@ -8,14 +8,15 @@ export default function Balance() {
   return (
     <View style={styles.container}>
       {hideBalance ? (
-        <View style={{ flexDirection: "row" }}>
+        <View style={styles.containerEyeOff}>
           <Text style={styles.balanceNumber}>$ ***</Text>
-          <Icon
-            name="eye-off-outline"
-            size={20}
-            style={styles.iconEye}
-            onPress={() => setHideBalance(false)}
-          />
+          <Pressable onPress={() => setHideBalance(false)}>
+            <Image
+              source={require("../../assets/card/eye-off.png")}
+              style={styles.eyeOff}
+              resizeMode="cover"
+            />
+          </Pressable>
         </View>
       ) : (
         <View style={styles.wrapItem}>
@@ -66,11 +67,12 @@ const styles = StyleSheet.create({
   percentage: {
     color: "#00a650",
     fontWeight: "bold",
-    fontSize: 11,
+    fontSize: 12,
   },
   balanceNumber: {
     fontSize: 26,
     fontWeight: "bold",
+    color: "rgba(0,0,0,.9)",
   },
   rest: {
     fontWeight: "bold",
@@ -80,5 +82,17 @@ const styles = StyleSheet.create({
   iconEye: {
     alignSelf: "center",
     marginLeft: 12,
+    color: "rgba(0,0,0,.9)",
+  },
+  containerEyeOff: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+  },
+  eyeOff: {
+    width: 18,
+    height: 18,
+    marginLeft: 9,
+    alignItems: "center",
+    bottom: 3,
   },
 });

@@ -13,7 +13,11 @@ export default function CardInfo({ title, description }: Props) {
     <View style={styles.container}>
       <View style={styles.containerHeader}>
         <View style={styles.wrapHeaderLeft}>
-          <FontAwesome5 name="hand-holding-usd" size={16} />
+          <FontAwesome5
+            name="hand-holding-usd"
+            size={16}
+            color="rgba(0,0,0,.9)"
+          />
           <Text style={styles.title}>{title}</Text>
         </View>
         <Icon name="chevron-forward-outline" size={16} />
@@ -46,13 +50,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     letterSpacing: 0.5,
     marginLeft: 10,
+    color: "rgba(0,0,0,.9)",
   },
   description: {
-    marginVertical: 10,
-    maxWidth: 300,
+    width: 300,
     fontWeight: "400",
     letterSpacing: 0.5,
-    fontSize: 15,
+    fontSize: 13,
     color: "rgba(0,0,0,.9)",
+    opacity: 0.8,
+    marginTop: 10,
   },
 });

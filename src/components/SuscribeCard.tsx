@@ -25,7 +25,7 @@ export default function SuscribeCard({ title }: Props) {
 
 const styles = StyleSheet.create({
   cardGradient: {
-    height: 45,
+    height: 40,
     justifyContent: "center",
     marginHorizontal: 16,
     borderRadius: 8,
