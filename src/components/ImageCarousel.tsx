@@ -60,7 +60,7 @@ export default function ImageCarousel() {
 const styles = StyleSheet.create({
   containerFlatlist: {
     height: 90,
-    marginBottom: 150,
+    marginBottom: 28,
   },
   image: {
     borderRadius: 8,
